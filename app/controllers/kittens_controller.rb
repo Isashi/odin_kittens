@@ -29,6 +29,12 @@ class KittensController < ApplicationController
 		redirect_to @kitten
 	end
 
+	def destroy
+		@kitten = Kitten.find(params[:id])
+		@kitten.destroy
+		redirect_to root_path
+	end
+
 	def kitten_params
  		params.require(:kitten).permit(:name, :age, :cuteness, :softness)
 	end

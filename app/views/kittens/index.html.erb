@@ -14,6 +14,7 @@
 			<td><%= kitten.cuteness %></td>
 			<td><%= kitten.softness %></td>
 			<td><%= link_to 'Show me the kitten!', kitten_path(kitten) %></td>
+			<td><%= link_to 'Update the kitten!', edit_kitten_path(kitten) %></td>
 		</tr>	
 	<% end %>
 </table>
